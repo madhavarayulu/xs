@@ -156,7 +156,7 @@ function Navbar() {
                             Platform
                           </div>
                           <Link
-                            to=""
+                            to="/data-movement"
                             className="nested-dropdown-links-container"
                           >
                             <img src="product__data-movement.svg" />
