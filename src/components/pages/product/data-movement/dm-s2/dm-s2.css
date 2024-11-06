@@ -1,0 +1,128 @@
+.dms2-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.dms2-contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dms2__base-grid__6-col-mobile {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .dms2__base-grid__6-col-mobile {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+#dms2__text-container {
+  grid-area: span 1 / span 12 / span 1 / span 12;
+}
+
+@media screen and (max-width: 767px) {
+  #dms2__text-container {
+    grid-area: 1 / 2 / 2 / 6;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #dms2__text-container {
+    grid-area: span 1 / span 6 / span 1 / span 6;
+  }
+}
+
+.dms2__text__center {
+  text-align: center;
+}
+
+.dms2__text {
+  font-family: "JetBrains Mono", serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1.25em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(#bd50ff, #007fff);
+}
+
+@media screen and (max-width: 767px) {
+  .dms2__show-only__desktop-tablet {
+    display: none;
+  }
+}
+
+.dms2__spacer__80 {
+  height: 80px;
+}
+
+.dms2__show-only__mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .dms2__show-only__mobile {
+    display: block;
+  }
+}
+
+.dms2__spacer__40 {
+  height: 40px;
+}
+
+.dms2__logos__4-cols {
+  display: grid;
+  grid-template: "." / 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-around;
+  place-items: center;
+  gap: 65px;
+}
+
+@media screen and (max-width: 767px) {
+  .dms2__logos__4-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.dms2__logos__4-cols img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  justify-self: center;
+}
+
+@media screen and (max-width: 767px) {
+  .dms2__logos__4-cols img {
+    grid-column: span 1 / span 1;
+  }
+}
+
+.dms2__spacer__160 {
+  height: 160px;
+}
+
+.dms2__spacer__80 {
+  height: 80px;
+}
+
+.dms2__bg__grey-05 {
+  z-index: -1;
+  background-color: #f7f8fa;
+  position: absolute;
+  inset: 0%;
+}

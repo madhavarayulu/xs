@@ -110,7 +110,8 @@
 
 .dms1__heading {
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.05em;
+  font-size: 0.875em;
+  font-weight: 500;
   line-height: 1.25em;
   letter-spacing: normal;
   text-transform: uppercase;

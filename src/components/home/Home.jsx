@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './home.css';
 import HomeSection1 from './home-section-1/HomeSection1';
 import HomeSection12 from './home-section-12/HomeSection12';
@@ -10,6 +11,10 @@ import HomeSection5 from './home-section-5/HomeSection5';
 function Home() {
   return (
     <main>
+      <Helmet>
+        <title>Xemsoft</title>
+      </Helmet>
+
       <HomeSection1 />
       <HomeSection2 />
       <HomeSection3 />
