@@ -1,0 +1,275 @@
+.ts1__section {
+  position: relative;
+  overflow: hidden;
+}
+
+.ts1__show-only__desktop-tablet {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.ts1__spacer__80 {
+  height: 80px;
+}
+
+.ts1__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.ts1__spacer__40 {
+  height: 40px;
+}
+
+.ts1__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &img {
+    max-width: 100%;
+  }
+}
+
+.ts1__text__white {
+  color: white;
+}
+
+.ts1__text__center {
+  text-align: center;
+}
+
+.ts1__text__display-xlarge {
+  margin: 0;
+  font-family: "Mulish", serif;
+  font-size: 2.75em;
+  font-weight: 800;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 767px) {
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+}
+
+.ts1__text__citron-60 {
+  color: #c9f227;
+}
+
+.ts1__newline__desktop-tablet {
+  display: block;
+
+  @media (max-width: 767px) {
+    display: inline;
+  }
+}
+
+.ts1__spacer__24 {
+  height: 24px;
+}
+
+.ts1__text__body-large {
+  margin: 0;
+  letter-spacing: -0.02125em;
+  font-size: 1.25em;
+  line-height: 1.875em;
+}
+
+#ts1__p1 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+.ts1__spacer__4 {
+  height: 4px;
+}
+
+.ts1__spacer__32 {
+  height: 32px;
+}
+
+.ts1__base-grid {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ts1__vertical__40 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 40px;
+}
+
+.ts1__button__list {
+  display: flex;
+  padding-top: 0;
+  margin-top: 0;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-template-columns: max-content;
+  grid-template-rows: auto;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 40px;
+
+  @media (max-width: 767px) {
+    justify-items: start;
+    grid-auto-flow: row;
+    column-gap: 24px;
+
+    &.ts1__center-mobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+#ts1_btn-container {
+  justify-self: center;
+  grid-area: span 1 / span 12 / span 1 / span 12;
+}
+
+.ts1__w-button {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ts1__button__blue-30 {
+  z-index: 2;
+  transition: color .2s;
+  color: #222;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #8cb1ff;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: "Mulish", serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.25em;
+  transition-property: all;
+
+  @media (max-width: 479px) {
+    white-space: pre-wrap;
+  }
+
+  &:hover {
+    color: #001525;
+    background-color: #b2cbff;
+    border-color: #b2cbff;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &.ts1__small {
+    padding: 8px 16px;
+
+    @media (max-width: 479px) {
+      position: relative;
+    }
+  }
+}
+
+.ts1__button__arrow {
+  z-index: 2;
+  text-decoration: none;
+  transition: color .2s;
+  position: relative;
+  background-color: #0000;
+  font-family: "Mulish", serif;
+  font-weight: 700;
+  transition-property: all;
+  display: inline-block;
+  background-position: 168.828px 50%;
+
+  &.ts1__white {
+    color: white;
+  }
+
+  &::after {
+    content: "→";
+    position: relative;
+    right: 0px;
+    display: inline;
+    margin-left: 10px;
+    transition: right .5s ease-out;
+  }
+
+  &:hover::after {
+    background-position: 178.828px 50%;
+    right: -10px;
+  }
+}
+
+.ts1__text__display-xsmall {
+  margin: 0;
+  letter-spacing: .01em;
+  font-family: "Mulish", serif;
+  font-size: 1.25em;
+  font-weight: 800;
+  line-height: 1.75em;
+
+  @media (max-width: 767px) {
+    font-size: 1.125em;
+    line-height: 1.5em;
+  }
+
+  &.ts1__white {
+    color: white;
+  }
+}
+
+.ts1__c3 {
+  display: flex;
+  overflow: hidden;
+
+  animation-name: ;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.ts1__spacer__60 {
+  height: 60px;
+}
+
+.ts1__bg__blue-100 {
+  z-index: -1;
+  background-color: #001525;
+  position: absolute;
+  inset: 0%;
+}
+
+.ts1__bg__image {
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
+  inset: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  object-fit: contain;
+  top: 45px;
+}

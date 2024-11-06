@@ -11,7 +11,7 @@ const navData = {
             label: 'Data movement',
           },
           {
-            to: '',
+            to: '/transformations',
             icon: 'product__transformations.svg',
             label: 'Transformations',
           },

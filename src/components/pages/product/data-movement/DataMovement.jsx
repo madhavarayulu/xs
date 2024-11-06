@@ -10,7 +10,7 @@ function DataMovement() {
   return (
     <main>
       <Helmet>
-        <title>Data Movement - Xemsoft</title>
+        <title>Data Movement | Xemsoft</title>
         <link rel="icon" type="image/svg+xml" href="" />
       </Helmet>
 

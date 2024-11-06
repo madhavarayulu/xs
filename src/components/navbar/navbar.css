@@ -114,6 +114,11 @@
     margin-top: 0.75em;
     opacity: 1;
     visibility: visible;
+
+    @media (max-width: 1023px) {
+      max-height: 70vh;
+      overflow-y: auto;
+    }
   }
 }
 
@@ -122,16 +127,17 @@
 .solutions-dropdown,
 .pricing-dropdown,
 .resources-dropdown {
-  padding: 2.5em 1em;
+  padding: 1.5em 1em;
   display: grid;
   grid-template-columns: auto;
   gap: 2.5em;
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1.25em;
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     padding: 2.5em;
+    font-size: 1em;
     max-width: 100%;
     overflow: hidden;
     transition: width 0.3s ease;
@@ -278,6 +284,26 @@
     max-width: min(90vw, 1200px);
     max-height: calc(100vh - 150px);
     overflow-y: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+
+    /* Common scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 3px;
+    }
   }
 
   .dropdown-active {

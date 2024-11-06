@@ -9,6 +9,7 @@ import {
 import Layout from './components/layout/Layout';
 import Home from './components/home/Home';
 import DataMovement from './components/pages/product/data-movement/DataMovement';
+import Transformations from './components/pages/product/transformations/Transformations';
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/data-movement" element={<DataMovement />} />
+        <Route path="/transformations" element={<Transformations />} />
       </Route>
     )
   );
