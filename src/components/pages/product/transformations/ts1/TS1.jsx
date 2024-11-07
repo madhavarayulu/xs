@@ -85,7 +85,73 @@ const TS1 = () => {
         <div className="ts1__spacer__32"></div>
       </div>
 
-      <div className="ts1__c3"></div>
+      <div className="ts1__c3">
+        <div className="ts1__c3__logos">
+          <div className="ts1__c3__logo">
+            <img src="ts1__intercom.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__asics.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__canva.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__newrelic.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img
+              src="ts1__shermin-williams.svg"
+              className="ts1__c3__logo-image"
+            />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__bronco.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__conde-nast.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__the-guardian.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__blend.svg" className="ts1__c3__logo-image" />
+          </div>
+        </div>
+
+        <div className="ts1__c3__logos">
+          <div className="ts1__c3__logo">
+            <img src="ts1__intercom.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__asics.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__canva.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__newrelic.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img
+              src="ts1__shermin-williams.svg"
+              className="ts1__c3__logo-image"
+            />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__bronco.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__conde-nast.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__the-guardian.svg" className="ts1__c3__logo-image" />
+          </div>
+          <div className="ts1__c3__logo">
+            <img src="ts1__blend.svg" className="ts1__c3__logo-image" />
+          </div>
+        </div>
+      </div>
 
       <div className="ts1__show-only__desktop-tablet">
         <div className="ts1__spacer__80"></div>

@@ -1,0 +1,138 @@
+.ts2__section {
+  position: relative;
+  overflow: hidden;
+}
+
+.ts2__show-only__desktop-tablet {
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.ts2__spacer__120 {
+  height: 120px;
+}
+
+.ts2__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.ts2__spacer__60 {
+  height: 60px;
+}
+
+.ts2__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ts2__text__center {
+  text-align: center;
+}
+
+.ts2__text__display-large {
+  margin: 0;
+  letter-spacing: .01em;
+  font-family: "Mulish", serif;
+  font-size: 2.25em;
+  font-weight: 800;
+  line-height: 1.25em;
+
+  @media (max-width: 767px) {
+    font-size: 1.75em;
+  }
+}
+
+.ts2__show-desktop-tablet-only {
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.ts2__show-mobile-only {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.ts2__spacer__40 {
+  height: 40px;
+}
+
+.ts2__base-grid {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ts2__div-block-520 {
+  display: flex;
+  align-items: baseline;
+  padding: 20px 0;
+  border-top: 1px solid #8a8c8f;
+  gap: 16px;
+
+  &p {
+    margin: 0;
+  }
+}
+
+#ts2__grid-div-1,
+#ts2__grid-div-2,
+#ts2__grid-div-3 {
+  grid-area: span 1 / span 4 / span 1 / span 4;
+  align-self: start;
+
+  @media (max-width: 991px) {
+    grid-column: span 12 / span 12;
+  }
+}
+
+.ts2__text__blue-60 {
+  color: #306bea;
+}
+
+.ts2__text__eyebrow {
+  font-family: "JetBrains Mono", serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+}
+
+.ts2__text__display-xsmall {
+  margin: 0;
+  font-family: "Mulish", serif;
+  font-size: 1.25em;
+  font-weight: 800;
+  line-height: 1.75em;
+  letter-spacing: .01em;
+
+  @media (max-width: 767px) {
+    font-size: 1.125em;
+    line-height: 1.5em;
+  }
+}
+
+.ts2__spacer__24 {
+  height: 24px;
+}

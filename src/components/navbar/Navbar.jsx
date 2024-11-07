@@ -117,11 +117,13 @@ function Navbar() {
           <div className="nav-align">
             <div className="nav-brand">
               <Link to="/">
-                <img
+                {/* <img
                   className="nav-logo-name"
                   src="fivetran-logo+name.svg"
                   alt="Fivetran"
-                />
+                /> */}
+                <div className='nav-logo'>X</div>
+                <div className="nav-logo-name">Xemsoft</div>
               </Link>
             </div>
 

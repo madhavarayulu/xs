@@ -242,10 +242,53 @@
   display: flex;
   overflow: hidden;
 
-  animation-name: ;
+  animation-name: moveLeftToRight;
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: -1564px;
+  }
+}
+
+.ts1__c3__logos {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: none;
+  justify-content: flex-start;
+
+  @media (max-width: 767px) {
+    column-gap: 16px;
+    row-gap: 24px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.ts1__c3__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+
+  @media (max-width: 767px) {
+    margin-right: 20px;
+  }
+}
+
+.ts1__c3__logo-image {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
 }
 
 .ts1__spacer__60 {
