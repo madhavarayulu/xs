@@ -8,7 +8,7 @@ function HomeSection3() {
       <div className="home__s3__contain">
         <div className="home__s3__content-block">
           <h2 className="home__s3__text-display-small home__s3__text-white">
-            Fivetran&apos;s{' '}
+            Xemsoft&apos;s{' '}
             <span className="home__s3__text-citron-60">
               Modern Data Stack Event Series
             </span>{' '}

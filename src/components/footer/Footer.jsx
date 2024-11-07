@@ -92,7 +92,7 @@ function Footer() {
               <div className="footer__links-wrapper">
                 <div className="footer__header">Company</div>
                 <Link to="" className="footer__link">
-                  About Fivetran
+                  About Xemsoft
                 </Link>
                 <Link to="" className="footer__link">
                   Culture
@@ -168,7 +168,7 @@ function Footer() {
                               </div>
                               <div className="vertical__8">
                                 <div className="footer__text">
-                                  Fivetran Product Update: October 2024
+                                  Xemsoft Product Update: October 2024
                                 </div>
                                 <Link
                                   to=""
@@ -250,7 +250,7 @@ function Footer() {
                 <span className="footer__copyright">
                   {new Date().getFullYear()}
                 </span>{' '}
-                Fivetran Inc.
+                Xemsoft Inc.
               </div>
             </div>
           </div>

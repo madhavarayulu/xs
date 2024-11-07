@@ -30,7 +30,7 @@ function HomeSection5() {
           </div>
           <div className="home__s5__header__s2">
             <p>
-              Fivetran moves data across the business, regardless of where it
+              Xemsoft moves data across the business, regardless of where it
               lives — on premises, the cloud or a bit of both. We offer
               multiple deployment models to meet the needs of every business,
               from stringent security requirements to maintaining that on-prem
@@ -96,7 +96,7 @@ function HomeSection5() {
                   <div className="spacer__30"></div>
                   <div className="home__s5__pane-text">
                     <strong>SaaS deployment:</strong> Fully-managed platform in
-                    Fivetran&apos;s secure cloud environment
+                    Xemsoft&apos;s secure cloud environment
                   </div>
                 </div>
               </div>
@@ -115,7 +115,7 @@ function HomeSection5() {
                   />
                   <div className="spacer__30"></div>
                   <div className="home__s5__pane-text">
-                    <strong>Hybrid:</strong> Utilize Fivetran&apos;s cloud-based
+                    <strong>Hybrid:</strong> Utilize Xemsoft&apos;s cloud-based
                     control plane while running select pipelines in your secure
                     environment
                   </div>

@@ -49,7 +49,7 @@ function HomeSection1() {
           <span className="text__blue-60-2">
             real-time database replication
           </span>{' '}
-          for terabytes of data with Fivetran.
+          for terabytes of data with Xemsoft.
         </>
       ),
     },
@@ -80,7 +80,7 @@ function HomeSection1() {
         <div className="banner">
           <div className="banner__tag">Product launch</div>
           <Link to="" className="button__arrow">
-            Announcing Fivetran&apos;s Hybrid deployment option - securely move
+            Announcing Xemsoft&apos;s Hybrid deployment option - securely move
             all of your data with one platform
           </Link>
           <div className="show-only__desktop">
@@ -103,7 +103,7 @@ function HomeSection1() {
             </h1>
             <div className="spacer__24"></div>
             <p>
-              From start-ups to global enterprises, the Fivetran data movement
+              From start-ups to global enterprises, the Xemsoft data movement
               platform unlocks innovation by accelerating insights, optimizing
               operations and powering data-driven decisions.
             </p>
@@ -218,7 +218,7 @@ function HomeSection1() {
                         <span className="text__blue-60-2">
                           real-time database replication
                         </span>{' '}
-                        for terabytes of data with Fivetran.
+                        for terabytes of data with Xemsoft.
                       </p>
                     </div>
                   </div>
