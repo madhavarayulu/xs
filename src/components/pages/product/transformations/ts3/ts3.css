@@ -54,7 +54,7 @@
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  column-gap: 20px;
+  gap: 20px;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr 1fr;
@@ -370,7 +370,7 @@
   vertical-align: middle;
 }
 
-.ts3__vertical__32 {
+/* .ts3__vertical__32 {
   display: grid;
   column-gap: 16px;
   row-gap: 2em;
@@ -378,7 +378,7 @@
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
   align-items: center;
-}
+} */
 
 #ts3__quickstart-grid-3 {
   grid-area: span 1 / span 8 / span 1 / span 8;
@@ -521,6 +521,14 @@
   }
 }
 
+#ts3__dbt-grid-4 {
+  grid-area: span 1 / span 8 / span 1 / span 8;
+
+  @media (max-width: 767px) {
+    grid-column: span 2 / span 2;
+  }
+}
+
 .ts3__div-block-525 {
   background-color: #1e0c09;
   color: white;
@@ -529,4 +537,218 @@
   justify-content: space-between;
   padding: 24px;
   display: flex;
+}
+
+.ts3__div-block-526 {
+  background-color: #eae0d3;
+  padding: 28px;
+}
+
+.ts3__bg__blue-05 {
+  z-index: -1;
+  background-color: #e8f1ff;
+  position: absolute;
+  inset: 0%;
+}
+
+.ts3__text__white {
+  color: white;
+}
+
+.ts3__text__display-medium {
+  font-family: "Mulish", serif;
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 2.25em;
+
+  @media (max-width: 767px) {
+    font-size: 1.5em;
+    line-height: 1.3em;
+  }
+}
+
+.ts3__transformation-tabs {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border: 1px solid #d0d3d9;
+  gap: 1px;
+
+  @media (max-width: 767px) {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+  }
+}
+
+#ts3__transformation-tabs-images-div {
+  @media (max-width: 991px) {
+    align-self: stretch;
+  }
+}
+
+.ts3__transformation-tabs__images {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 991px) {
+    aspect-ratio: auto;
+  }
+}
+
+.ts3__transformation-tabs__bg-image {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.ts3__transformation-tabs__image {
+  width: 80%;
+  max-width: 100%;
+  display: none;
+  position: absolute;
+  vertical-align: middle;
+
+  &.ts3__open {
+    display: block;
+
+    @media (max-width: 767px) {
+      width: 95%;
+    }
+  }
+}
+
+.ts3__transformation-tabs__tabs {
+  display: flex;
+  flex-flow: column;
+  background-color: #d0d3d9;
+  border-left: 1px solid #d0d3d9;
+  gap: 1px;
+
+  @media (max-width: 767px) {
+    border-top: 1px solid #d0d3d9;
+    border-left-style: none;
+  }
+}
+
+.ts3__transformation-tabs__tab {
+  background-color: #001525;
+  color: white;
+  cursor: pointer;
+  flex: none;
+  padding: 20px;
+
+  &.ts3__open {
+    cursor: auto;
+    flex-flow: column;
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.ts3__transformation-tabs__tab-title {
+  opacity: .5;
+
+  &.ts3__open {
+    opacity: 1;
+  }
+}
+
+.ts3__text__body-large {
+  font-size: 1.25em;
+  line-height: 1.875em;
+  letter-spacing: -0.02125em;
+}
+
+.ts3__text__medium-weight {
+  font-weight: 500;
+}
+
+.ts3__transformation-tabs__tab-content {
+  display: none;
+
+  &.ts3__open {
+    display: block;
+  }
+}
+
+.ts3__show-only__tablet-mobile {
+  display: none;
+
+  @media (max-width: 991px) {
+    display: block;
+  }
+}
+
+.ts3__bg__blue-100 {
+  z-index: -1;
+  background-color: #001525;
+  position: absolute;
+  inset: 0%;
+}
+
+#ts3__dbtcloud-div-1 {
+  grid-area: span 1 / span 3 / span 1 / span 3;
+
+  @media (max-width: 767px) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+#ts3__dbtcloud-div-2 {
+  grid-area: 1 / 5 / 2 / 9;
+
+  @media (max-width: 767px) {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+  }
+}
+
+.ts3__div-block-518 {
+  display: flex;
+  padding: 41px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-flow: column;
+  border-radius: 4px;
+  background-color: #00170f;
+  aspect-ratio: 1;
+
+  @media (max-width: 767px) {
+    padding: 24px;
+  }
+}
+
+#ts3__dbtcloud-div-3 {
+  @media (max-width: 767px) {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+  }
+}
+
+#ts3__dbtcloud-div-4 {
+  grid-area: 1 / 9 / 2 / 13;
+
+  @media (max-width: 767px) {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+  }
+}
+
+.ts3__div-block-519 {
+  display: flex;
+  padding: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-flow: column;
+  border-radius: 4px;
+  background-color: #f3f0ec;
+  aspect-ratio: 1;
+}
+
+.ts3__spacer-16 {
+  height: 16px;
 }
