@@ -1,7 +1,8 @@
 import React from 'react';
 import './home-section-12.css';
 import { Link } from 'react-router-dom';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Lottie from 'react-lottie-player';
+import animationData from './home-s12__animation.json';
 
 function HomeSection12() {
   return (
@@ -42,24 +43,17 @@ function HomeSection12() {
           </div>
         </div>
 
-        {/* <div className="show-mobile-only">
+        <div className="show-mobile-only">
           <div className="spacer__60"></div>
-        </div> */}
+        </div>
 
-        {/* <div className="show-desktop-tablet-only">
+        <div className="show-desktop-tablet-only">
           <div className="spacer__88"></div>
-        </div> */}
+        </div>
       </div>
 
-      <div className="s12__animation-wrapper">
-        <div className="s12__animation-container">
-          <DotLottieReact
-            className="s12__animation-object"
-            src="home-s12-space-grid.json"
-            loop
-            autoplay
-          />
-        </div>
+      <div className="s12__lottie-animation">
+        <Lottie loop animationData={animationData} play />
       </div>
     </section>
   );
