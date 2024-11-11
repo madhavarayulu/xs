@@ -1,0 +1,42 @@
+.dds3__section {
+  position: relative;
+  overflow: hidden;
+}
+
+.dds3__show-only__desktop-tablet {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.dds3__spacer__160 {
+  height: 160px;
+}
+
+.dds3__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.dds3__spacer__80 {
+  height: 80px;
+}
+
+.dds3__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+.dds3__bg__grey-05 {
+  z-index: -1;
+  background-color: #f7f8fa;
+  position: absolute;
+  inset: 0%;
+}

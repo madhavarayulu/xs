@@ -10,6 +10,7 @@ import Layout from './components/layout/Layout';
 import Home from './components/home/Home';
 import DataMovement from './components/pages/product/data-movement/DataMovement';
 import Transformations from './components/pages/product/transformations/Transformations';
+import DataDemocratization from './components/pages/solutions/data-democratization/DataDemocratization';
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/data-movement" element={<DataMovement />} />
         <Route path="/transformations" element={<Transformations />} />
+        <Route path="/data-democratization" element={<DataDemocratization />} />
       </Route>
     )
   );

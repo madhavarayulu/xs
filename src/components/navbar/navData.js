@@ -84,7 +84,7 @@ const navData = {
         title: 'For Operations',
         links: [
           {
-            to: '',
+            to: '/data-democratization',
             icon: 'solutions__data-democratization.svg',
             label: 'Data democratization',
           },
