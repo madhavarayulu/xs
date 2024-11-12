@@ -89,7 +89,7 @@ const navData = {
             label: 'Data democratization',
           },
           {
-            to: '',
+            to: '/infrastructure-modernization',
             icon: 'solutions__infrastructure-modernization.svg',
             label: 'Infrastructure modernization',
           },

@@ -1,38 +1,20 @@
-.dds3__section {
+.ims2__section {
   position: relative;
   overflow: hidden;
 }
 
-.dds3__show-only__desktop-tablet {
-  @media (max-width: 767px) {
-    display: none;
-  }
+.ims2__spacer__88 {
+  height: 88px;
 }
 
-.dds3__spacer__160 {
-  height: 160px;
-}
-
-.dds3__show-only__mobile {
-  display: none;
-
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-
-.dds3__spacer__80 {
-  height: 80px;
-}
-
-.dds3__contain {
+.ims2__contain {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.dds3__base-grid__6-col-mobile {
+.ims2__base-grid__6-col-mobile {
   display: grid;
   width: 100%;
   align-items: center;
@@ -41,13 +23,12 @@
   grid-template-rows: auto;
   column-gap: 20px;
 
-
   @media (max-width: 767px) {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 
-#dds3__heading {
+#ims2__div-1 {
   grid-area: span 1 / span 12 / span 1 / span 12;
 
   @media (max-width: 767px) {
@@ -55,30 +36,30 @@
   }
 }
 
-.dds3__text__center {
+.ims2__text__center {
   text-align: center;
 }
 
-.dds3__text__display-eyebrow {
+.ims2__text__display-eyebrow {
   font-family: "JetBrains Mono", serif;
   font-size: 0.875em;
   font-weight: 500;
   line-height: 1.25em;
-  text-transform: uppercase;
   letter-spacing: 0.0625em;
+  text-transform: uppercase;
 
-  &.dds3__text__gradient-purple {
+  &.ims2__text__gradient-purple {
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(#bd50ff, #007fff);
     background-clip: text;
   }
 }
 
-.dds3__spacer__40 {
+.ims2__spacer__40 {
   height: 40px;
 }
 
-.dds3__logos__4-cols {
+.ims2__logos__4-cols {
   display: grid;
   place-items: center;
   justify-content: space-around;
@@ -92,17 +73,17 @@
   }
 }
 
-#dds3__asos,
-#dds3__newrelic,
-#dds3__prh,
-#dds3__blend,
-#dds3__logitech,
-#dds3__nandos,
-#dds3__autodesk,
-#dds3-sfa {
+#ims2__image-1,
+#ims2__image-2,
+#ims2__image-3,
+#ims2__image-4,
+#ims2__image-5,
+#ims2__image-6,
+#ims2__image-7,
+#ims2__image-8 {
   vertical-align: middle;
-  display: inline-block;
   max-width: 100%;
+  display: inline-block;
   justify-self: center;
 
   @media (max-width: 767px) {
@@ -110,9 +91,24 @@
   }
 }
 
-.dds3__bg__grey-05 {
-  z-index: -1;
-  background-color: #f7f8fa;
-  position: absolute;
-  inset: 0%;
+.ims2__show-only__desktop-tablet {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.ims2__spacer__160 {
+  height: 160px;
+}
+
+.ims2__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.ims2__spacer__80 {
+  height: 80px;
 }
