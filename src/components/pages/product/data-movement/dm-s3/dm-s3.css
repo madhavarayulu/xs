@@ -66,12 +66,12 @@
   font-family: "Mulish", sans-serif;
   font-size: 2em;
   font-weight: 800;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 
 @media screen and (max-width: 767px) {
   .dms3__text {
-    font-size: 1.375em;
+    font-size: 1.5em;
   }
 }
 
@@ -123,7 +123,7 @@
 
 @media screen and (max-width: 767px) {
   .dms3__text__display-small {
-    font-size: 1.25em;
+    font-size: 1.35em;
   }
 }
 

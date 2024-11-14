@@ -65,13 +65,13 @@
   font-family: "Mulish", sans-serif;
   font-size: 1.75em;
   font-weight: 800;
-  line-height: 2em;
+  line-height: 1.5em;
   margin: 0;
 }
 
 @media screen and (max-width: 767px) {
   .dms4__text {
-    font-size: 1.375em;
+    font-size: 1.5em;
   }
 }
 
@@ -82,8 +82,8 @@
 .dms4__text__body-large {
   margin: 0;
   font-size: 1.25em;
-  letter-spacing: -0.02125em;
-  line-height: 1em;
+  /* letter-spacing: -0.02125em; */
+  line-height: 1.5em;
 }
 
 .dms4__spacer__88 {
@@ -108,8 +108,11 @@
   background-image: linear-gradient(to bottom, #cfd3db, #d0d3d9);
 }
 
-.dms4__hover-card:hover {
-  background-image: linear-gradient(#bd50ff, #007fff);
+.dms4__hover-card:hover,
+.dms4__hover-card.in-view {
+  /* background-image: linear-gradient(#bd50ff, #007fff); */
+  background-image: none;
+  background-color: #306bea;
 }
 
 #dms4__image-container {

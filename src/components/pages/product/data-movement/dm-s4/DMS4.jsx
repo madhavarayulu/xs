@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './dm-s4.css';
 
 function DMS4() {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.dms4__hover-card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      },
+      {
+        threshold: 1,
+      }
+    );
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <div className="dms4__section">
       <div className="dms4__show-only__desktop-tablet">

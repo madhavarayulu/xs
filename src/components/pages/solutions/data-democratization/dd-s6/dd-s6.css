@@ -95,7 +95,7 @@
 }
 
 .dds6__text-span {
-  background-image: url('dds6__rectangle.svg');
+  background-image: url('/src/assets/rectangle.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
