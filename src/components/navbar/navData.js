@@ -175,7 +175,7 @@ const navData = {
         title: '',
         links: [
           {
-            to: '',
+            to: '/pricing',
             icon: 'pricing__overview.svg',
             label: 'Overview',
           },

@@ -151,7 +151,7 @@
   display: flex;
   column-gap: 10px;
   text-align: left;
-  background-image: url('dms3__checkmark.svg');
+  background-image: url('/src/assets/check-black.svg');
   background-position: 0 3px;
   background-repeat: no-repeat;
   background-size: 24px;
