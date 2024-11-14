@@ -141,12 +141,12 @@
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: 0 3px;
-  background-image: url('ims4__check-black.svg');
+  background-image: url('/src/assets/check-black.svg');
   text-align: left;
   column-gap: 10px;
 
   &.ims5__blue {
-    background-image: url('ims4__check-blue.svg');
+    background-image: url('/src/assets/check-blue.svg');
   }
 
   & a {

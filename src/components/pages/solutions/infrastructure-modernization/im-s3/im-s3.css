@@ -130,7 +130,7 @@
   padding-left: 40px;
   margin-bottom: 0;
   width: auto;
-  background-image: url('ims3__check-black.svg');
+  background-image: url('/src/assets/check-black.svg');
   background-position: 0 3px;
   background-repeat: no-repeat;
   background-size: 24px;
@@ -138,7 +138,7 @@
   column-gap: 10px;
 
   &.ims3__blue {
-    background-image: url('ims3__check-blue.svg');
+    background-image: url('/src/assets/check-blue.svg');
   }
 
   & a {
