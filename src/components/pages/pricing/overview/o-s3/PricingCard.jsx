@@ -41,7 +41,7 @@ const PricingCard = ({ plan }) => {
                 <li key={index} className="os3__pricing__checklist-item">
                   <div className="os3__w-layout-grid os3__list__item-wrapper-2">
                     <img
-                      src="/src/assets/check-black.svg"
+                      src="./src/assets/check-black.svg"
                       className="os3__list__item-icon"
                       alt="checkmark"
                     />

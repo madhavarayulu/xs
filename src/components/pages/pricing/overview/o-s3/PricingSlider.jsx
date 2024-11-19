@@ -75,7 +75,7 @@ const PricingCard = ({ plan }) => (
             <li key={index} className="os3__pricing__checklist-item">
               <div className="os3__w-layout-grid os3__list__item-wrapper-2">
                 <img
-                  src="/src/assets/check-black.svg"
+                  src="./src/assets/check-black.svg"
                   className="os3__list__item-icon"
                   alt="checkmark"
                 />
@@ -138,14 +138,14 @@ const PricingSlider = () => {
       </div>
       <div className="os3__left-arrow os3__w-slider-arrow-left">
         <img
-          src="/src/assets/arrow-left.svg"
+          src="./src/assets/arrow-left.svg"
           className="os3__arrow-image"
           onClick={prevSlide}
         />
       </div>
       <div className="os3__right-arrow os3__w-slider-arrow-right">
         <img
-          src="/src/assets/arrow-right.svg"
+          src="./src/assets/arrow-right.svg"
           className="os3__arrow-image"
           onClick={nextSlide}
         />
