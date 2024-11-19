@@ -23,6 +23,11 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  z-index: 2;
+  color: #306bea;
+  font-weight: 600;
+  transition: color 0.2s;
+  position: relative;
 }
 
 /* :root {

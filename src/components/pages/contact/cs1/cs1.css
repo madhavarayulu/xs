@@ -1,0 +1,121 @@
+.cs1__section {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.cs1__spacer__48 {
+  height: 48px;
+}
+
+.cs1__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cs1__b58 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 48px;
+  column-gap: 16px;
+}
+
+.cs1__text__display-large {
+  font-family: "Mulish", serif;
+  font-size: 2.25em;
+  font-weight: 800;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+}
+
+.cs1__w-layout-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.cs1__b58__cards-grid {
+  grid-template-rows: auto;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 48px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+#cs1__a {
+  align-self: stretch;
+}
+
+.cs1__b58__card-wrapper {
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px #c0c0c080;
+  font-weight: 400;
+  border-radius: 8px;
+}
+
+.cs1__w-inline-block {
+  max-width: 100%;
+
+  @media (max-width: 767px) {
+    display: inline-block;
+  }
+}
+
+.cs1__b58__card-left-col {
+  display: grid;
+  padding: 36px;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  flex: 1;
+  color: #222;
+  row-gap: 8px;
+  column-gap: 16px;
+}
+
+.cs1__text__display-small {
+  font-family: "Mulish", serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 767px) {
+    font-size: 1.375em;
+  }
+}
+
+.cs1__b58__card-link-block {
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 36px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: #306bea;
+  background-color: #f7f8fa;
+}
+
+.cs1__b58__more-information-wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  row-gap: .5em;
+  column-gap: 16px;
+}
+
+.cs1__text__medium-weight {
+  font-weight: 500;
+}

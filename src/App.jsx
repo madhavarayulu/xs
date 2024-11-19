@@ -13,6 +13,7 @@ import Transformations from './components/pages/product/transformations/Transfor
 import DataDemocratization from './components/pages/solutions/data-democratization/DataDemocratization';
 import InfrastructureModernization from './components/pages/solutions/infrastructure-modernization/InfrastructureModernization';
 import Overview from './components/pages/pricing/overview/Overview';
+import Contact from './components/pages/contact/Contact';
 
 function App() {
   const router = createBrowserRouter(
@@ -27,6 +28,7 @@ function App() {
           element={<InfrastructureModernization />}
         />
         <Route path="/pricing" element={<Overview />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     )
   );

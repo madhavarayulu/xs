@@ -103,7 +103,7 @@ function Footer() {
                 <Link to="" className="footer__link">
                   News
                 </Link>
-                <Link to="" className="footer__link">
+                <Link to="/contact" className="footer__link">
                   Contact us
                 </Link>
                 <Link to="" className="footer__link">
