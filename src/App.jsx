@@ -14,6 +14,7 @@ import DataDemocratization from './components/pages/solutions/data-democratizati
 import InfrastructureModernization from './components/pages/solutions/infrastructure-modernization/InfrastructureModernization';
 import Overview from './components/pages/pricing/overview/Overview';
 import Contact from './components/pages/contact/Contact';
+import Connectors from './components/pages/connectors/Connectors';
 
 function App() {
   const router = createBrowserRouter(
@@ -29,6 +30,7 @@ function App() {
         />
         <Route path="/pricing" element={<Overview />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/connectors" element={<Connectors />} />
       </Route>
     )
   );

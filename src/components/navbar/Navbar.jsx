@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FaBars, FaXmark, FaPlay } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import NavMenuItem from './NavMenuItem';
 import DropdownSection from './DropdownSection';
 import DropdownLink from './DropdownLink';
@@ -65,7 +65,6 @@ function Navbar() {
     });
   };
 
-  // Add this to your React component
   useEffect(() => {
     window.addEventListener('resize', handleDropdownPosition);
     return () => window.removeEventListener('resize', handleDropdownPosition);
@@ -122,7 +121,7 @@ function Navbar() {
                   src="fivetran-logo+name.svg"
                   alt="Fivetran"
                 /> */}
-                <div className='nav-logo'>X</div>
+                <div className="nav-logo">X</div>
                 <div className="nav-logo-name">Xemsoft</div>
               </Link>
             </div>
@@ -146,7 +145,9 @@ function Navbar() {
                     </NavMenuItem>
                   ))}
 
-                  <div className="menu-item">Connectors</div>
+                  <div className="menu-item">
+                    <NavLink to="/connectors" onClick={handleLinkClick}>Connectors</NavLink>
+                  </div>
                 </div>
 
                 <div className="nav-menu-2">
