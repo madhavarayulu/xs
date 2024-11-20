@@ -2,6 +2,7 @@ import React from 'react';
 import './co-s1.css';
 import './cardsData';
 import { cardsData } from './cardsData';
+import { ChevronDown } from 'lucide-react';
 
 const CoS1 = () => {
   return (
@@ -42,11 +43,12 @@ const CoS1 = () => {
                     className="cos1__searchfilter__toggle cos1__w-dropdown-toggle"
                     id="cos1__w-dropdown-toggle-4"
                   >
-                    <div className="cos1__w-icon-dropdown-toggle"></div>
+                    {/* <div className="cos1__w-icon-dropdown-toggle"></div> */}
                     <div className="cos1__searchfilter__label">
                       <div className="cos1__text__caption">
                         Filter connectors
                       </div>
+                      <ChevronDown size={20} />
                     </div>
                   </div>
                   <nav
@@ -139,24 +141,6 @@ const CoS1 = () => {
               </div>
             </div>
           ))}
-          {/* <div id='cos1__grid-div-1' className='cos1__hover-card cos1__no-shadow'>
-            <div id='cos1__grid-div-2' className='cos1__hover-card__inner'>
-              <a href='' className='cos1__hover-card__link-cover cos1__w-inline-block'></a>
-              <div className='cos1__div-block-171'>
-                <div className='cos1__div-block-172'>
-                  <img src='15five.svg' className='cos1__connector-list__image' />
-                  <div className='cos1__spacer__20'></div>
-                  <h3 className='cos1__text__display-xsmall'>15Five</h3>
-                  <div className='cos1__spacer__20'></div>
-                  <p className='cos1__hover-card__summary'>Xemsoft&apos;s 15Five connector is a fully managed data integration. Our ELT connector extracts a deep level of data from the source, replicates and loads that data in your centralized data warehouse or data lake, represented in an easy-to-navigate schema, where analysts can easily access and query it alongside the rest of your organization&apos;s critical information.</p>
-                  <div className='cos1__spacer__20'></div>
-                </div>
-                <div className='cos1__hover-card__pills'>
-                  <div className='cos1__hover-card__pill'></div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="cos1__text__center">
           <div className="cos1__spacer__60"></div>
