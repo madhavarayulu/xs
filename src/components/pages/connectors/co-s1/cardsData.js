@@ -127,7 +127,7 @@ export const cardsData = [
   },
   {
     id: 19,
-    imageUrl: 'aircall.svg',
+    imageUrl: 'aircall.png',
     title: 'Aircall',
     summary:
       'Xemsoft&apos;s Aircall connector is a fully managed data integration. Our ELT connector extracts a deep level of data from the source, replicates and loads that data in your centralized data warehouse or data lake, represented in an easy-to-navigate schema, where analysts can easily access and query it alongside the rest of your organization&apos;s critical information.',

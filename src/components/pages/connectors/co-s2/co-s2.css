@@ -1,0 +1,41 @@
+.cos2__section {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.cos2__show-only__desktop-mobile {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.cos2__spacer__160 {
+  height: 160px;
+}
+
+.cos2__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.cos2__spacer__88 {
+  height: 88px;
+}
+
+.cos2__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cos2__bg__grey-05 {
+  z-index: -1;
+  background-color: #f7f8fa;
+  position: absolute;
+  inset: 0%;
+}
