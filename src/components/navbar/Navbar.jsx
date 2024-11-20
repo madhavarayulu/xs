@@ -146,7 +146,31 @@ function Navbar() {
                   ))}
 
                   <div className="menu-item">
-                    <NavLink to="/connectors" onClick={handleLinkClick}>Connectors</NavLink>
+                    <NavLink
+                      to="/connectors"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) => (isActive ? 'active' : '')}
+                    >
+                      Connectors
+                    </NavLink>
+                  </div>
+                  <div className="menu-item">
+                    <NavLink
+                      to="/contact"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) => (isActive ? 'active' : '')}
+                    >
+                      Contact
+                    </NavLink>
+                  </div>
+                  <div className="menu-item">
+                    <NavLink
+                      to="/careers"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) => (isActive ? 'active' : '')}
+                    >
+                      Careers
+                    </NavLink>
                   </div>
                 </div>
 

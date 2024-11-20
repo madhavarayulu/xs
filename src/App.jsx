@@ -15,6 +15,7 @@ import InfrastructureModernization from './components/pages/solutions/infrastruc
 import Overview from './components/pages/pricing/overview/Overview';
 import Contact from './components/pages/contact/Contact';
 import Connectors from './components/pages/connectors/Connectors';
+import Careers from './components/pages/careers/Careers';
 
 function App() {
   const router = createBrowserRouter(
@@ -31,6 +32,7 @@ function App() {
         <Route path="/pricing" element={<Overview />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/connectors" element={<Connectors />} />
+        <Route path="/careers" element={<Careers />} />
       </Route>
     )
   );
