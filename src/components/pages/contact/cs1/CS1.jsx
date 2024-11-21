@@ -1,5 +1,6 @@
 import React from 'react';
 import './cs1.css';
+import ContactForm from '../contact-form/ContactForm';
 
 // Contact card data
 const contactCards = [
@@ -58,6 +59,8 @@ const CS1 = () => {
       <div className="cs1__contain">
         <div className="cs1__b58">
           <h2 className="cs1__text__display-large">Contact Us</h2>
+          <ContactForm />
+          <div className='cs1__spacer__48'></div>
           <div className="cs1__w-layout-grid cs1__b58__cards-grid">
             {contactCards.map((card, index) => (
               <ContactCard

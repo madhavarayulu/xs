@@ -1,0 +1,263 @@
+/* Updated Color Palette */
+:root {
+  --primary-blue: #2667FF;
+  /* Enhanced primary blue */
+  --primary-purple: #BD50FF;
+  /* Kept original purple accent */
+  --text-dark: #1A1A2E;
+  /* Darker text for better contrast */
+  --text-secondary: #4A4A68;
+  /* Soft secondary text color */
+  --input-bg: rgba(38, 118, 255, 0.05);
+  /* Maintained original translucent input background */
+  --border-color: rgba(38, 118, 255, 0.3);
+  /* Slightly more defined border */
+  --error-color: #DC143C;
+  /* Accessible error red */
+}
+
+/* Contact Form */
+.contact-form {
+  font-family: "Mulish", serif;
+  padding: 2.5em;
+  /* background: linear-gradient(45deg,
+      rgba(38, 118, 255, 0.1),
+      rgba(189, 80, 255, 0.1)); */
+  background: linear-gradient(45deg,
+      rgba(189, 80, 255, 0.1),
+      rgba(38, 118, 255, 0.1));
+  box-shadow:
+    0 15px 35px rgba(38, 118, 255, 0.4),
+    0 15px 35px rgba(189, 80, 255, 0.4);
+  max-width: 100%;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  transform: scale(0.95, 0.95);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover,
+.contact-form:focus-within {
+  background: linear-gradient(45deg,
+      rgba(38, 118, 255, 0.2),
+      rgba(189, 80, 255, 0.2));
+  box-shadow:
+    0 20px 45px rgba(38, 118, 255, 0.8),
+    0 20px 45px rgba(189, 80, 255, 0.8);
+  transform: scale(1, 1);
+}
+
+@media (max-width: 425px) {
+  .contact-form {
+    padding: 1.5em;
+  }
+}
+
+.contact-form h1 {
+  font-size: 2.2em;
+  text-align: left;
+  color: var(--primary-blue);
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+@media (max-width: 425px) {
+  .contact-form h1 {
+    font-size: 1.8em;
+  }
+}
+
+.contact-form p {
+  margin: 0 0 2em 0;
+  font-size: 1em;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.contact-form .form-input:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--primary-blue);
+  background-color: rgba(38, 118, 255, 0.03);
+  box-shadow: 0 5px 15px rgba(38, 118, 255, 0.1);
+}
+
+/* Ensure all form inputs have the same base styles */
+.contact-form input,
+.contact-form textarea,
+.contact-form .form-input {
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  
+  /* Add this to match other input behaviors */
+  &:focus {
+    outline: 2px solid var(--primary-blue);
+    background-color: rgba(38, 118, 255, 0.03);
+    box-shadow: 0 5px 15px rgba(38, 118, 255, 0.1);
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  color: var(--text-dark);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.contact-form textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+.phone-input-container {
+  display: flex;
+  gap: 1em;
+}
+
+@media (max-width: 510px) {
+  .phone-input-container {
+    flex-direction: column;
+  }
+
+  .phone-input-container select,
+  .phone-input-container input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.phone-input-container select,
+.phone-input-container input {
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+}
+
+.contact-form .phone-input-container select {
+  flex: 0.4;
+  max-width: 45%;
+  color: var(--text-secondary);
+  background-color: var(--input-bg);
+}
+
+.country-selector {
+  position: relative;
+  padding-right: 2.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%232667FF' d='M70 90l35-35H35z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75em top 50%;
+  background-size: 1em;
+}
+
+.contact-form button {
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+  background-color: color-mix(in srgb, var(--primary-blue) 80%, black);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(38, 118, 255, 0.2);
+}
+
+.contact-form button:focus {
+  background-color: color-mix(in srgb, var(--primary-blue) 80%, black);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(38, 118, 255, 0.2);
+  outline: none;
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(38, 118, 255, 0.1);
+}
+
+.form-input.error {
+  border-color: var(--error-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.success-wrapper {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-wrapper h1 {
+  line-height: 1.75rem;
+  padding-bottom: 1rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: green;
+  margin-top: 1rem;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Adjust this value to control spacing */
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.try-again-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
