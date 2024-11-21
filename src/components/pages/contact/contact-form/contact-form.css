@@ -55,6 +55,7 @@
 
 .contact-form h1 {
   font-size: 2.2em;
+  line-height: 1.2em;
   text-align: left;
   color: var(--primary-blue);
   margin-bottom: 0.5em;
@@ -95,7 +96,7 @@
   background-color: var(--input-bg);
   color: var(--text-dark);
   transition: all 0.3s ease;
-  
+
   /* Add this to match other input behaviors */
   &:focus {
     outline: 2px solid var(--primary-blue);
@@ -152,9 +153,12 @@
 
 .contact-form .phone-input-container select {
   flex: 0.4;
-  max-width: 45%;
   color: var(--text-secondary);
   background-color: var(--input-bg);
+
+  @media (min-width: 511px) {
+    max-width: 45%;
+  }
 }
 
 .country-selector {
@@ -173,6 +177,7 @@
   padding: 1em;
   font-size: 1.2em;
   font-weight: 700;
+  line-height: 1.2em;
   background-color: var(--primary-blue);
   color: white;
   border: none;
@@ -231,7 +236,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; /* Adjust this value to control spacing */
+  gap: 0.5rem;
+  /* Adjust this value to control spacing */
 }
 
 .submit-button:disabled {
