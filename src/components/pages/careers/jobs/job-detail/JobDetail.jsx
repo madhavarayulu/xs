@@ -57,7 +57,7 @@ const JobDetail = () => {
             </div>
             <div className="jd__spacer__48"></div>
             <div className="jd__bg">
-              <img src="jd__pattern.svg" className="jd__bg__image" />
+              <img src="/jd__pattern.svg" className="jd__bg__image" />
             </div>
           </div>
         </div>
