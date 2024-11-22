@@ -135,7 +135,7 @@ function Footer() {
                             <div className="footer__slide-content-wrapper">
                               <div className="footer__blog-image-wrap">
                                 <img
-                                  src="footer__carousel__image__1.png"
+                                  src="/footer__carousel__image__1.png"
                                   className="footer__slide-image"
                                 />
                               </div>
@@ -162,7 +162,7 @@ function Footer() {
                             <div className="footer__slide-content-wrapper">
                               <div className="footer__blog-image-wrap">
                                 <img
-                                  src="footer__carousel__image__2.png"
+                                  src="/footer__carousel__image__2.png"
                                   className="footer__slide-image"
                                 />
                               </div>
@@ -188,7 +188,7 @@ function Footer() {
                             <div className="footer__slide-content-wrapper">
                               <div className="footer__blog-image-wrap">
                                 <img
-                                  src="footer__carousel__image__3.png"
+                                  src="/footer__carousel__image__3.png"
                                   className="footer__slide-image"
                                 />
                               </div>
