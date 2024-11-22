@@ -1,0 +1,157 @@
+.jd__main {
+  flex: 1;
+}
+
+.jd__show-only__mobile {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.jd__section {
+  position: relative;
+  overflow: hidden;
+}
+
+.jd__spacer__48 {
+  height: 48px;
+}
+
+.jd__contain {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.jd__base-grid {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#jd__div-1 {
+  grid-area: span 1 / span 4 / span 1 / span 4;
+  align-self: stretch;
+
+  @media (max-width: 767px) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.jd__div-block-91 {
+  height: 100%;
+  position: relative;
+}
+
+.jd__div-block-92 {
+  position: sticky;
+  top: 160px;
+}
+
+.jd__vertical__12 {
+  display: grid;
+  align-items: start;
+  align-content: start;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 12px;
+}
+
+#jd__h1 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+.jd__text__display-large {
+  font-family: "Mulish", serif;
+  font-size: 2.25em;
+  font-weight: 800;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 767px) {
+    font-size: 1.85em;
+  }
+}
+
+#jd__location {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+.jd__spacer__40 {
+  height: 40px;
+}
+
+.jd__vertical__20 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+#jd__a {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+  justify-self: start;
+
+  @media (max-width: 479px) {
+    justify-self: stretch;
+  }
+}
+
+.jd__button__outline {
+  border: 1.2px solid #306bea;
+  color: #306bea;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0000;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-family: "Mulish", serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.1875em;
+  transition-property: all;
+
+  &.jd__small {
+    padding: 8px 16px;
+  }
+}
+
+.jd__w-button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+.jd__bg {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.jd__bg__image {
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  display: inline-block;
+}

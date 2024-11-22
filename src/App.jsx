@@ -16,6 +16,7 @@ import Overview from './components/pages/pricing/overview/Overview';
 import Contact from './components/pages/contact/Contact';
 import Connectors from './components/pages/connectors/Connectors';
 import Careers from './components/pages/careers/Careers';
+import JobDetail from './components/pages/careers/jobs/job-detail/JobDetail';
 
 function App() {
   const router = createBrowserRouter(
@@ -33,6 +34,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/connectors" element={<Connectors />} />
         <Route path="/careers" element={<Careers />} />
+        <Route
+          path="/jobs/:jobId/location/:locationId"
+          element={<JobDetail />}
+        />
       </Route>
     )
   );
