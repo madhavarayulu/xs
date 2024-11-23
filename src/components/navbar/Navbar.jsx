@@ -145,33 +145,35 @@ function Navbar() {
                     </NavMenuItem>
                   ))}
 
-                  <div className="menu-item">
-                    <NavLink
-                      to="/connectors"
-                      onClick={handleLinkClick}
-                      className={({ isActive }) => (isActive ? 'active' : '')}
-                    >
-                      Connectors
-                    </NavLink>
-                  </div>
-                  <div className="menu-item">
-                    <NavLink
-                      to="/contact"
-                      onClick={handleLinkClick}
-                      className={({ isActive }) => (isActive ? 'active' : '')}
-                    >
-                      Contact
-                    </NavLink>
-                  </div>
-                  <div className="menu-item">
-                    <NavLink
-                      to="/careers"
-                      onClick={handleLinkClick}
-                      className={({ isActive }) => (isActive ? 'active' : '')}
-                    >
-                      Careers
-                    </NavLink>
-                  </div>
+                  <NavLink
+                    to="/connectors"
+                    onClick={handleLinkClick}
+                    className={({ isActive }) =>
+                      `menu-item ${isActive ? 'active' : ''}`
+                    }
+                  >
+                    <div className="menu-item-content">Connectors</div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/contact"
+                    onClick={handleLinkClick}
+                    className={({ isActive }) =>
+                      `menu-item ${isActive ? 'active' : ''}`
+                    }
+                  >
+                    <div className="menu-item-content">Contact</div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/careers"
+                    onClick={handleLinkClick}
+                    className={({ isActive }) =>
+                      `menu-item ${isActive ? 'active' : ''}`
+                    }
+                  >
+                    <div className="menu-item-content">Careers</div>
+                  </NavLink>
                 </div>
 
                 <div className="nav-menu-2">

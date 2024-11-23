@@ -312,9 +312,12 @@
   text-decoration: none;
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-thickness: 0.25px; /* Thickness of the underline */
-  text-underline-offset: 8px; /* Space between text and underline */
-  text-decoration-color: transparent; /* Hide the underline initially */
+  text-decoration-thickness: 0.25px;
+  /* Thickness of the underline */
+  text-underline-offset: 8px;
+  /* Space between text and underline */
+  text-decoration-color: transparent;
+  /* Hide the underline initially */
   transition: color 0.2s;
 }
 

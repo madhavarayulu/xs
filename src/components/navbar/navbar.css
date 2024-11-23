@@ -91,7 +91,7 @@
 .nav-menu {
   @media (min-width: 1024px) {
     display: flex;
-    gap: 5em;
+    gap: 2em;
     position: static;
     transform: none;
     height: auto;
@@ -126,6 +126,13 @@
   cursor: pointer;
   position: relative;
 
+  display: block;
+  /* Make it full width */
+  text-decoration: none;
+  width: 100%;
+  /* Ensure full width on mobile */
+
+
   @media (max-width: 1023px) {
     font-size: 1em;
     border-bottom: 1px solid silver;
@@ -157,6 +164,12 @@
   & a.active {
     color: #306bea;
   }
+}
+
+/* Update the active and hover states */
+.nav-menu .menu-item.active .menu-item-content,
+.nav-menu .menu-item:hover .menu-item-content {
+  color: #306bea;
 }
 
 /* Dropdown Styles */
