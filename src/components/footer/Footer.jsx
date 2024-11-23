@@ -14,10 +14,10 @@ function Footer() {
             <div className="footer__col">
               <div className="footer__links-wrapper">
                 <div className="footer__header">Product</div>
-                <Link to="" className="footer__link">
+                <Link to="/data-movement" className="footer__link">
                   Data movement
                 </Link>
-                <Link to="" className="footer__link">
+                <Link to="/transformations" className="footer__link">
                   Transformations
                 </Link>
                 <Link to="" className="footer__link">
@@ -41,7 +41,7 @@ function Footer() {
             <div className="footer__col">
               <div className="footer__links-wrapper">
                 <div className="footer__header">Pricing</div>
-                <Link to="" className="footer__link">
+                <Link to="/pricing" className="footer__link">
                   Plans
                 </Link>
                 <Link to="" className="footer__link">
@@ -97,7 +97,7 @@ function Footer() {
                 <Link to="" className="footer__link">
                   Culture
                 </Link>
-                <Link to="" className="footer__link">
+                <Link to="/careers" className="footer__link">
                   Careers
                 </Link>
                 <Link to="" className="footer__link">

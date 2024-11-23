@@ -2,23 +2,49 @@
   flex: 1;
 }
 
+/* Show/Hide Classes */
 .jd__show-only__mobile {
   display: none;
+}
 
-  @media (max-width: 767px) {
+.jd__show-only__desktop-tablet {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .jd__show-only__mobile {
     display: block;
+  }
+
+  .jd__show-only__desktop-tablet {
+    display: none;
   }
 }
 
+/* Section Structure */
 .jd__section {
   position: relative;
   overflow: hidden;
+}
+
+.jd__section.jd__overflow-visible {
+  overflow: visible;
+}
+
+/* Spacers */
+.jd__spacer__40 {
+  height: 40px;
 }
 
 .jd__spacer__48 {
   height: 48px;
 }
 
+.jd__spacer__64 {
+  height: 64px;
+}
+
+/* Container */
 .jd__contain {
   width: 100%;
   max-width: 1280px;
@@ -26,32 +52,32 @@
   padding: 0 20px;
 }
 
+/* Grid System */
 .jd__base-grid {
   display: grid;
   width: 100%;
-  align-items: center;
-  grid-auto-columns: 1fr;
+  align-items: start;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
   gap: 20px;
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
+  .jd__base-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-#jd__div-1 {
-  grid-area: span 1 / span 4 / span 1 / span 4;
-  align-self: stretch;
-
-  @media (max-width: 767px) {
-    grid-column: span 2 / span 2;
-  }
-}
-
+/* Block Layouts */
 .jd__div-block-91 {
   height: 100%;
   position: relative;
+  grid-area: span 1 / span 4 / span 1 / span 4;
+}
+
+@media (max-width: 767px) {
+  .jd__div-block-91 {
+    grid-column: span 2 / span 2;
+  }
 }
 
 .jd__div-block-92 {
@@ -59,99 +85,240 @@
   top: 160px;
 }
 
+/* Vertical Spacing */
 .jd__vertical__12 {
   display: grid;
-  align-items: start;
-  align-content: start;
-  grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   row-gap: 12px;
-}
-
-#jd__h1 {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-.jd__text__display-large {
-  font-family: "Mulish", serif;
-  font-size: 2.25em;
-  font-weight: 800;
-  line-height: 1.25em;
-  letter-spacing: 0.01em;
-
-  @media (max-width: 767px) {
-    font-size: 1.85em;
-  }
-}
-
-#jd__location {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-.jd__spacer__40 {
-  height: 40px;
 }
 
 .jd__vertical__20 {
   display: grid;
-  grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
+  row-gap: 20px;
 }
 
-#jd__a {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-  justify-self: start;
+.jd__vertical__40 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 12px;
+}
 
-  @media (max-width: 479px) {
-    justify-self: stretch;
+.jd__vertical__64 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 64px;
+}
+
+/* Typography */
+.jd__text__display-large {
+  font-family: "Mulish", serif;
+  font-size: 2.25em;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 767px) {
+  .jd__text__display-large {
+    font-size: 1.85em;
   }
 }
 
+/* Buttons */
 .jd__button__outline {
+  display: inline-block;
   border: 1.2px solid #306bea;
   color: #306bea;
   text-align: center;
   white-space: nowrap;
-  background-color: #0000;
+  background-color: transparent;
   border-radius: 4px;
   padding: 12px 20px;
   font-family: "Mulish", serif;
   font-size: 1em;
   font-weight: 700;
-  line-height: 1.1875em;
-  transition-property: all;
+  line-height: 1.1875;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 
-  &.jd__small {
-    padding: 8px 16px;
+.jd__button__outline:hover {
+  background-color: #306bea;
+  color: white;
+  text-decoration: none;
+}
+
+.jd__button__outline.jd__small {
+  padding: 8px 16px;
+}
+
+/* Content Area */
+#jd__div-5 {
+  grid-area: 1 / 6 / 2 / 13;
+  align-self: start;
+}
+
+@media (max-width: 767px) {
+  #jd__div-5 {
+    grid-area: span 1 / span 2 / span 1 / span 2;
   }
 }
 
-.jd__w-button {
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
+/* Tabs */
+.jd__tabs {
+  position: relative;
 }
 
+.jd__tabs__menu {
+  position: relative;
+  border-bottom: 1px solid #d0d3d9;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.jd__tabs__menu-tab {
+  background-color: transparent;
+  margin-right: 60px;
+  padding: 0 0 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  color: #4a4a4a;
+  transition: color 0.2s;
+}
 
+.jd__tabs__menu-tab:hover {
+  color: #306bea;
+}
+
+.jd__tabs__menu-tab.jd__w-current {
+  border-bottom: 3px solid #306bea;
+  color: #306bea;
+}
+
+@media (max-width: 767px) {
+  .jd__tabs__menu-tab {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 479px) {
+  .jd__tabs__menu-tab {
+    margin-right: 20px;
+  }
+}
+
+/* Tab Content */
+.jd__tabs__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.jd__tabs__pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.jd__tabs__pane.jd__w-tab-active {
+  display: block;
+  opacity: 1;
+}
+
+/* Content Styling */
+.jd__content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.jd__content p {
+  margin-bottom: 1em;
+}
+
+.jd__content ul {
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-left: 40px;
+}
+
+.jd__content ul li {
+  margin-bottom: 10px;
+}
+
+.jd__content strong {
+  font-weight: 600;
+}
+
+/* Background */
 .jd__bg {
-  z-index: -1;
-  width: 100%;
-  height: 100%;
   position: absolute;
-  inset: 0%;
+  inset: 0;
+  z-index: -1;
 }
 
 .jd__bg__image {
-  z-index: -1;
-  object-fit: cover;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
   position: absolute;
-  inset: 0%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Links */
+.jd__w-inline-block {
+  max-width: 100%;
   display: inline-block;
+}
+
+/* Generic Utility Classes */
+.jd__w-button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Transitions */
+.jd__button__outline,
+.jd__tabs__menu-tab,
+.jd__tabs__pane {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.jd__error {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jd__error-text {
+  font-size: 1.25em;
+  color: #4a4a4a;
+}
+
+.jd__location-text {
+  font-size: 1em;
+  color: #4a4a4a;
+  margin-top: 0.5em;
+}
+
+.jd__link {
+  color: #306bea;
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.25px; /* Thickness of the underline */
+  text-underline-offset: 8px; /* Space between text and underline */
+  text-decoration-color: transparent; /* Hide the underline initially */
+  transition: color 0.2s;
+}
+
+.jd__link:hover {
+  color: #1d4ba8;
+  text-decoration-color: #1d4ba8;
 }
