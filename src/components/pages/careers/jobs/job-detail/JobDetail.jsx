@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import openPositionsData from '../openPositionsData';
 import JobDescription from './JobDescription';
+import JobForm from './JobForm';
 
 const TabButton = ({ current, href, children }) => (
   <a
@@ -16,7 +17,7 @@ const TabButton = ({ current, href, children }) => (
   </a>
 );
 
-const JobHeader = ({ job, location }) => (
+const JobHeader = ({ job, location, showApplyButton }) => (
   <div className="jd__div-block-92">
     <div className="jd__vertical__40">
       <h1 className="jd__text__display-large">{job.title}</h1>
@@ -24,9 +25,11 @@ const JobHeader = ({ job, location }) => (
     </div>
     <div className="jd__spacer__40"></div>
     <div className="jd__vertical__20">
-      <a href="#apply" className="jd__button__outline jd__small jd__w-button">
-        Apply now
-      </a>
+      {showApplyButton && (
+        <a href="#apply" className="jd__button__outline jd__small jd__w-button">
+          Apply now
+        </a>
+      )}
       <Link to="/careers#jobs" className="jd__link">
         View all open roles
       </Link>
@@ -34,7 +37,7 @@ const JobHeader = ({ job, location }) => (
   </div>
 );
 
-const JobContent = ({ job, activeTab }) => (
+const JobContent = ({ job, activeTab, location }) => (
   <div className="jd__tabs__content">
     <div
       className={`jd__tabs__pane ${
@@ -56,7 +59,11 @@ const JobContent = ({ job, activeTab }) => (
       }`}
     >
       <div className="jd__vertical__64">
-        <div id="grnhse__app" />
+        <div id="grnhse__app">
+          <div className="jd__spacer__40"></div>
+          <JobForm job={job} location={location} />
+          <div className="jd__spacer__40"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -67,6 +74,7 @@ const JobDetail = () => {
   const [activeTab, setActiveTab] = useState('about');
   const [job, setJob] = useState(null);
   const [location, setLocation] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const foundJob = openPositionsData
@@ -77,6 +85,7 @@ const JobDetail = () => {
       setJob(foundJob);
       setLocation(foundJob.locations.find((loc) => loc.id === locationId));
     }
+    setLoading(false);
   }, [jobId, locationId]);
 
   useEffect(() => {
@@ -92,6 +101,15 @@ const JobDetail = () => {
 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="jd__loading">
+        <div className="jd__loading-spinner"></div>
+        <p>Loading job details...</p>
+      </div>
+    );
+  }
 
   if (!job || !location) {
     return (
@@ -118,7 +136,11 @@ const JobDetail = () => {
           <div className="jd__contain">
             <div className="jd__base-grid">
               <div className="jd__div-block-91">
-                <JobHeader job={job} location={location} />
+                <JobHeader
+                  job={job}
+                  location={location}
+                  showApplyButton={activeTab !== 'apply'}
+                />
               </div>
             </div>
           </div>
@@ -138,7 +160,11 @@ const JobDetail = () => {
           <div className="jd__base-grid">
             {/* Desktop Header */}
             <div className="jd__show-only__desktop-tablet jd__div-block-91">
-              <JobHeader job={job} location={location} />
+              <JobHeader
+                job={job}
+                location={location}
+                showApplyButton={activeTab !== 'apply'}
+              />
             </div>
 
             {/* Content Area */}
@@ -154,7 +180,11 @@ const JobDetail = () => {
                     Application
                   </TabButton>
                 </div>
-                <JobContent job={job} activeTab={activeTab} />
+                <JobContent
+                  job={job}
+                  activeTab={activeTab}
+                  location={location}
+                />
               </div>
             </div>
           </div>
