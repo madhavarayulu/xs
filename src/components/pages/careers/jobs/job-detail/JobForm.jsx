@@ -132,7 +132,6 @@ const JobForm = ({ job, location }) => {
   // const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
   const BASE_URL =
     import.meta.env.VITE_API_BASE_URL || 'https://xs-backend-3n79.onrender.com';
-  console.log('BASE_URL:', BASE_URL);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
