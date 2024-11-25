@@ -130,10 +130,24 @@ const JobForm = ({ job, location }) => {
   };
 
   // const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
-  const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const BASE_URL =
+    import.meta.env.VITE_API_BASE_URL || 'https://xs-backend-3n79.onrender.com';
+  console.log('BASE_URL:', BASE_URL);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Ensure BASE_URL is correctly set
+    if (!BASE_URL) {
+      console.error('API Base URL is not defined');
+      setSubmitStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        error: 'API configuration error',
+      });
+      return;
+    }
+
     if (!validateForm() || isSubmitting) return;
 
     if (validateForm()) {
@@ -150,12 +164,18 @@ const JobForm = ({ job, location }) => {
         formDataToSend.append('jobLocation', formData.jobLocation);
         formDataToSend.append('resume', file);
 
+        console.log('Submission URL:', `${BASE_URL}/api/job-application`);
+
         const response = await fetch(`${BASE_URL}/api/job-application`, {
           method: 'POST',
           body: formDataToSend,
         });
 
         const data = await response.json();
+
+        // Log raw response for debugging
+        console.log('Response Status:', response.status);
+        console.log('Response Data:', data);
 
         if (!response.ok) {
           throw new Error(data.message || 'Failed to submit application');
