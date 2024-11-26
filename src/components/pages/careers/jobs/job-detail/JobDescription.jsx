@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import openPositionsData from '../openPositionsData';
-import './job-description.css'
+import './job-description.css';
+
+// Utility function to create URL-friendly slugs
+const slugify = (text) => {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove non-word chars
+    .replace(/[\s_-]+/g, '-') // Replace spaces, underscores, multiple hyphens with single hyphen
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+};
 
 // Utility function to convert HTML content to valid JSX
 const createMarkup = (htmlContent) => {
@@ -18,7 +27,7 @@ const generateJobDescription = (content) => {
 };
 
 const JobDescription = () => {
-  const { jobId } = useParams();
+  const { jobTitle, locationName } = useParams();
   const [description, setDescription] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,7 +41,11 @@ const JobDescription = () => {
         // Find the job in openPositionsData
         const job = openPositionsData
           .flatMap((dept) => dept.jobs)
-          .find((job) => job.id === jobId);
+          .find(
+            (job) =>
+              slugify(job.title) === jobTitle &&
+              job.locations.some((loc) => slugify(loc.name) === locationName)
+          );
 
         if (!job) {
           throw new Error('Job not found');
@@ -71,8 +84,11 @@ const JobDescription = () => {
       }
     };
 
-    loadJobDescription();
-  }, [jobId]);
+    // Only attempt to load if we have route parameters
+    if (jobTitle && locationName) {
+      loadJobDescription();
+    }
+  }, [jobTitle, locationName]);
 
   if (loading) {
     return (

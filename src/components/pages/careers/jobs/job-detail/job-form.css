@@ -191,6 +191,25 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jf__file-label span {
+  display: inline-block;
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+@media (max-width: 425px) {
+  .jf__file-label span {
+    max-width: 200px;
+  }
 }
 
 /* Focus styles for file upload */

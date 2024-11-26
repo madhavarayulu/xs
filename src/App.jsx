@@ -35,7 +35,7 @@ function App() {
         <Route path="/connectors" element={<Connectors />} />
         <Route path="/careers" element={<Careers />} />
         <Route
-          path="/jobs/:jobId/location/:locationId"
+          path="/jobs/:jobTitle/location/:locationName"
           element={<JobDetail />}
         />
       </Route>

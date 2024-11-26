@@ -70,23 +70,38 @@ const JobContent = ({ job, activeTab, location }) => (
 );
 
 const JobDetail = () => {
-  const { jobId, locationId } = useParams();
+  const { jobTitle, locationName } = useParams();
   const [activeTab, setActiveTab] = useState('about');
   const [job, setJob] = useState(null);
   const [location, setLocation] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Utility function to create URL-friendly slugs
+  function slugify(text) {
+    return text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove non-word chars
+      .replace(/[\s_-]+/g, '-') // Replace spaces, underscores, multiple hyphens with single hyphen
+      .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+  }
+
   useEffect(() => {
     const foundJob = openPositionsData
       .flatMap((department) => department.jobs)
-      .find((job) => job.id === jobId);
+      .find((job) => slugify(job.title) === jobTitle);
 
     if (foundJob) {
-      setJob(foundJob);
-      setLocation(foundJob.locations.find((loc) => loc.id === locationId));
+      const foundLocation = foundJob.locations.find(
+        (loc) => slugify(loc.name) === locationName
+      );
+
+      if (foundLocation) {
+        setJob(foundJob);
+        setLocation(foundLocation);
+      }
     }
     setLoading(false);
-  }, [jobId, locationId]);
+  }, [jobTitle, locationName]);
 
   useEffect(() => {
     const handleHashChange = () => {

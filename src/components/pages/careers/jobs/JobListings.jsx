@@ -4,10 +4,19 @@ import { MoveRight } from 'lucide-react';
 import openPositionsData from './openPositionsData';
 import { Link } from 'react-router-dom';
 
-const JobLocation = ({ jobId, location }) => (
+// Utility function to create URL-friendly slugs
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove non-word chars
+    .replace(/[\s_-]+/g, '-') // Replace spaces, underscores, multiple hyphens with single hyphen
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
+
+const JobLocation = ({ job, location }) => (
   <div>
     <Link
-      to={`/jobs/${jobId}/location/${location.id}`}
+      to={`/jobs/${slugify(job.title)}/location/${slugify(location.name)}`}
       className="jobs__location jobs__w-inline-block"
     >
       <div>{location.name}</div>
@@ -18,13 +27,13 @@ const JobLocation = ({ jobId, location }) => (
   </div>
 );
 
-const JobTitle = ({ id, title, locations }) => (
+const JobTitle = ({ job }) => (
   <div className="jobs__vertical__16">
     <div className="jobs__title">
-      <div className="jobs__text__display-small">{title}</div>
+      <div className="jobs__text__display-small">{job.title}</div>
     </div>
-    {locations.map((location) => (
-      <JobLocation key={location.id} jobId={id} location={location} />
+    {job.locations.map((location) => (
+      <JobLocation key={location.id} job={job} location={location} />
     ))}
   </div>
 );
@@ -37,12 +46,7 @@ const Department = ({ name, jobs }) => (
       </div>
       <div className="jobs__vertical__40">
         {jobs.map((job) => (
-          <JobTitle
-            key={job.id}
-            id={job.id}
-            title={job.title}
-            locations={job.locations}
-          />
+          <JobTitle key={job.id} job={job} />
         ))}
       </div>
     </div>
